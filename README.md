@@ -58,10 +58,18 @@ https://www.openvdb.org/documentation/doxygen/build.html
 - https://www.jetbrains.com/clion/
 
 ### Package Managed install
+#### Windows (vcpkg)
 - https://github.com/microsoft/vcpkg
 - https://vcpkg.info/port/openvdb
+#### Mac (homebrew)
 - https://brew.sh
 - https://formulae.brew.sh/formula/openvdb
+#### Linux (apt)
+- https://packages.ubuntu.com/
+- https://packages.ubuntu.com/jammy/libopenvdb-dev
+- https://packages.ubuntu.com/jammy/libopenvdb8.1
+- https://packages.ubuntu.com/jammy/libopenvdb-tools
+- https://packages.ubuntu.com/jammy/python3-openvdb
 
 ### OpenVDB
 - https://www.openvdb.org/
