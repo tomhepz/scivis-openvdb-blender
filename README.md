@@ -23,6 +23,31 @@ This section contains some useful snipets to help with installation *on specific
 See 'Building Standalone' section and then 'Building with OpenVDB' section of:
 https://www.openvdb.org/documentation/doxygen/build.html
 
+```bash
+# Install Build Dependencies
+# Check script! (you're sudo-ing it)
+chmod +x ./dependencyinstallapt.sh
+sudo ./dependencyinstall.sh
+```
+
+```bash
+# To build OpenVDB (and python module, and helper binaries)
+# after downloading from https://github.com/AcademySoftwareFoundation/openvdb/releases
+# and extracting and cd'ing into folder...
+mkdir build
+cd build
+
+cmake -D OPENVDB_BUILD_VDB_PRINT=ON \
+      -D OPENVDB_BUILD_VDB_RENDER=ON \
+      -D OPENVDB_BUILD_VDB_VIEW=ON \
+      -D OPENVDB_BUILD_PYTHON_MODULE=ON \
+      ../
+
+make -j4
+
+make install
+```
+
 ### OpenVDB build on MacOS with homebrew
 See 'Building Standalone' section and then 'Building with OpenVDB' section of:
 https://www.openvdb.org/documentation/doxygen/build.html
