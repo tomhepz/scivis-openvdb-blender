@@ -45,7 +45,7 @@ cmake -D OPENVDB_BUILD_VDB_PRINT=ON \
 
 make -j4
 
-make install
+sudo make install
 ```
 
 ### OpenVDB build on MacOS with homebrew
