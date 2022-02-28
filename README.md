@@ -30,7 +30,6 @@ cd .\vcpkg
 See 'Building Standalone' section and then 'Building with OpenVDB' section of:
 https://www.openvdb.org/documentation/doxygen/build.html
 
--------------------
 ## Useful Links
 ### Editors
 - https://visualstudio.microsoft.com/
