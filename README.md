@@ -59,6 +59,8 @@ https://www.openvdb.org/documentation/doxygen/build.html
 
 ### Package Managed install
 - https://github.com/microsoft/vcpkg
+- https://vcpkg.info/port/openvdb
+- https://brew.sh
 - https://formulae.brew.sh/formula/openvdb
 
 ### OpenVDB
