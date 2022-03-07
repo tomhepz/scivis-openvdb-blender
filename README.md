@@ -30,7 +30,7 @@ sudo apt-get python3-openvdb
 ### OpenVDB Package Managed Install on Mac
 Caveat: This does not come with the viewing tools, or python package. If needed, build from source.
 ```bash
-brew 
+brew update
 brew install openvdb
 ```
 
