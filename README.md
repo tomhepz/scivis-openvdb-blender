@@ -4,7 +4,7 @@ Template for creating and then rendering OpenVDB scientific voxel data in Blende
 ## Requirements
 1) Text editor / C++ IDE (Visual Studio, CLion, etc...)
 2) C++ Compiler (g++ / clang++) (often bundled with IDE)
-3) OpenVDB build from source (with python support if using python)
+3) OpenVDB build (with python support if using python)
 4) Blender
 5) Linux preferred / MacOS possible / Windows Hard
 
@@ -34,7 +34,7 @@ brew
 brew install openvdb
 ```
 
-### Manual OpenVDB build on Linux with apt
+### Manual OpenVDB build
 See 'Building Standalone' section and then 'Building with OpenVDB' section of:
 https://www.openvdb.org/documentation/doxygen/build.html
 
@@ -79,7 +79,7 @@ make -j4
 sudo make install
 ```
 
-### Manual OpenVDB build on Mac with Homebrew
+### Manual OpenVDB build on Mac
 See 'Building Standalone' section and then 'Building with OpenVDB' section of:
 https://www.openvdb.org/documentation/doxygen/build.html
 
@@ -116,10 +116,6 @@ make -j4
 
 sudo make install
 ```
-
-### OpenVDB build on MacOS with homebrew
-See 'Building Standalone' section and then 'Building with OpenVDB' section of:
-https://www.openvdb.org/documentation/doxygen/build.html
 
 ## Useful Links
 ### Editors
