@@ -93,7 +93,7 @@ brew install tbb                       # TBB
 brew install zlib                      # zlib
 brew install boost                     # Boost
 # Python
-brew install boost-python              # Boost-python
+brew install boost-python3              # Boost-python
 brew install python                    # Python
 brew install numpy                     # NumPy
 # vdb_view
