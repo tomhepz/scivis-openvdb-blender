@@ -19,18 +19,87 @@ Template for creating and then rendering OpenVDB scientific voxel data in Blende
 ## Installation
 This section contains some useful snipets to help with installation *on specific operating systems*. These may depend on your own Operating system, and software versions. Please refer to the installation instructions by the original software provider.
 
-### OpenVDB build on Linux with apt
+### OpenVDB Package Managed Install on Linux
+```bash
+sudo apt-get update
+sudo apt-get libopenvdb-dev
+sudo apt-get libopenvdb-tools
+sudo apt-get python3-openvdb
+```
+
+### OpenVDB Package Managed Install on Mac
+Caveat: This does not come with the viewing tools, or python package. If needed, build from source.
+```bash
+brew 
+brew install openvdb
+```
+
+### Manual OpenVDB build on Linux with apt
 See 'Building Standalone' section and then 'Building with OpenVDB' section of:
 https://www.openvdb.org/documentation/doxygen/build.html
 
 ```bash
 # Install Build Dependencies
-# Check script! (you're sudo-ing it)
-chmod +x ./dependencyinstallapt.sh
-sudo ./dependencyinstall.sh
+sudo apt-get update
+# Core library
+sudo apt-get install cmake                   # CMake
+sudo apt-get install libtbb-dev              # TBB
+sudo apt-get install zlibc                   # zlib
+sudo apt-get install libboost-system-dev     # Boost::system
+sudo apt-get install libboost-iostreams-dev  # Boost::iostream
+sudo apt-get install libblosc-dev            # Blosc
+# Python
+sudo apt-get install libboost-python-dev     # Boost::python
+sudo apt-get install libboost-numpy-dev      # Boost::numpy
+sudo apt-get install python-dev              # Python
+sudo apt-get install python-numpy            # NumPy
+# Optional
+sudo apt-get install libpng-dev              # libpng
+sudo apt-get install libilmbase-dev          # IlmBase
+sudo apt-get install libopenexr-dev          # OpenEXR
+# vdb_view
+sudo apt-get install libglu1-mesa-dev freeglut3-dev mesa-common-dev #OpenGL
+sudo apt-get install libglfw3-dev            # GLFW
+sudo apt-get install libglew-dev
+
+# To build OpenVDB (and python module, and helper binaries)
+# after downloading from https://github.com/AcademySoftwareFoundation/openvdb/releases
+# and extracting and cd'ing into folder...
+mkdir build
+cd build
+
+cmake -D OPENVDB_BUILD_VDB_PRINT=ON \
+      -D OPENVDB_BUILD_VDB_RENDER=ON \
+      -D OPENVDB_BUILD_VDB_VIEW=ON \
+      -D OPENVDB_BUILD_PYTHON_MODULE=ON \
+      ../
+
+make -j4
+
+sudo make install
 ```
 
+### Manual OpenVDB build on Mac with Homebrew
+See 'Building Standalone' section and then 'Building with OpenVDB' section of:
+https://www.openvdb.org/documentation/doxygen/build.html
+
 ```bash
+# Install Build Dependencies
+# Core library
+brew install cmake                     # CMake
+brew install ilmbase                   # IlmBase
+brew install openexr                   # OpenEXR
+brew install tbb                       # TBB
+brew install zlib                      # zlib
+brew install boost                     # Boost
+# Python
+brew install boost-python              # Boost-python
+brew install python                    # Python
+brew install numpy                     # NumPy
+# vdb_view
+brew install glfw                      # GLFW
+brew install glew
+
 # To build OpenVDB (and python module, and helper binaries)
 # after downloading from https://github.com/AcademySoftwareFoundation/openvdb/releases
 # and extracting and cd'ing into folder...
