@@ -6,15 +6,31 @@ Template for creating and then rendering OpenVDB scientific voxel data in Blende
 2) C++ Compiler (g++ / clang++) (often bundled with IDE)
 3) OpenVDB build (with python support if using python)
 4) Blender
-5) Linux preferred / MacOS possible / Windows Hard
 
 ## Generic Steps
 1) Edit C++ file `main.cpp` to create `*.vdb` files using OpenVDB library
 2) Compile code `g++ main.cpp`
-3) Run to create `.vdb` files
-4) Import `.vdb` files into blender
+3) Run to create `*.vdb` files
+4) Import `*.vdb` files into blender
 5) Shade with shader nodes
 6) Render with cycles
+
+## Using helper tools
+### Easy raytrace plot for debugging
+Adjusting parameters as necessary
+```bash
+vdb_render myvoxels.vdb out.exr \
+  -translate 160,0,0 -absorb 0.0001,0.0001,0.0001 \
+  -gain 0.01 -scatter 0.003,0.004,0.006 \
+  -light 0.5,0.5,0,1,1,1
+```
+
+### Voxel viewer with x,y,z endpoint shifts to look into volume
+```bash
+# View controls
+vdb_view -h 
+vdb_view myvoxels.vdb
+```
 
 ## Installation
 This section contains some useful snipets to help with installation *on specific operating systems*. These may depend on your own Operating system, and software versions. Please refer to the installation instructions by the original software provider.
@@ -28,7 +44,7 @@ sudo apt-get python3-openvdb
 ```
 
 ### OpenVDB Package Managed Install on Mac
-Caveat: This does not come with the viewing tools, or python package. If needed, build from source.
+Caveat: This does not come with the helper viewing tools, or python package. If needed, build from source.
 ```bash
 brew update
 brew install openvdb
