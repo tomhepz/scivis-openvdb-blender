@@ -1,4 +1,4 @@
-# scivis-openvdb-sample
+# scivis-openvdb-blender
 Template for creating and then rendering OpenVDB scientific voxel data in Blender (cycles) for beautiful visualisations.
 
 ## Requirements
