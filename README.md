@@ -1,6 +1,8 @@
 # scivis-openvdb-blender
 Template for creating and then rendering OpenVDB scientific voxel data in Blender (cycles) for beautiful visualisations.
 
+![HydrogenGif](https://user-images.githubusercontent.com/9285131/157228859-012fad25-5cf1-4321-ab1f-4abe1548ecdd.gif)
+
 ## Requirements
 1) Text editor / C++ IDE (Visual Studio, CLion, etc...)
 2) C++ Compiler (g++ / clang++) (often bundled with IDE)
